@@ -199,7 +199,7 @@ fn backup(runtime_paths: &RuntimePaths) {
 
         // 一時ファイル経由の安全なコピー
         if let Err(e) = safe_copy(&source, &archive) {
-            debug!("バックアップに失敗 [{file_name}]: {e}");
+            error!("バックアップに失敗 [{file_name}]: {e}");
         }
     }
 }
